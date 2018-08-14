@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
 import SiteHeader from '../components/layout/SiteHeader';
+import SiteHeaderMobile from '../components/layout/mobile/SiteHeader';
 import SiteFooter from '../components/layout/SiteFooter';
 import SiteFooterMobile from '../components/layout/mobile/SiteFooter';
 import injectSheet, { ThemeProvider } from 'react-jss';
@@ -27,12 +28,29 @@ const styles = {
 };
 
 class App extends Component {
-  render() {
+  state = {
+    isOpenSideBar: false,
+  //   isModalOpen: false,
+  };
+  // them mot action show sidebar
+  renderDesktop() {
     const { classes } = this.props;
     return (
       <ThemeProvider theme={theme}>
         <div className={classes.app}>
-          <SiteHeader isMobile/>
+          <SiteHeader />
+          {this.props.children}
+          <SiteFooter />
+        </div>
+      </ThemeProvider>
+    );
+  }
+  renderMobile() {
+    const { classes } = this.props;
+    return (
+      <ThemeProvider theme={theme}>
+        <div className={classes.app}>
+          <SiteHeaderMobile />
           {this.props.children}
           {
             isMobile ? <SiteFooterMobile /> : <SiteFooter />
@@ -40,6 +58,9 @@ class App extends Component {
         </div>
       </ThemeProvider>
     );
+  }
+  render() {
+    return isMobile ? this.renderMobile(): this.renderDesktop();
   }
 }
 

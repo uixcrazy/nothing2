@@ -6,7 +6,7 @@ import SiteNav from '../../site-nav/SiteNav';
 import injectSheet from 'react-jss';
 import styles from './SiteHeader.style';
 
-const SiteHeader = ({ classes }) => {
+const SiteHeaderMobile = ({ classes }) => {
   return (
     <header className={classes.siteHeader}>
       <div className={classes.branding}>
@@ -19,8 +19,8 @@ const SiteHeader = ({ classes }) => {
   );
 };
 
-SiteHeader.propTypes = {
+SiteHeaderMobile.propTypes = {
   classes: PropTypes.object,
 };
 
-export default injectSheet(styles)(SiteHeader);
+export default injectSheet(styles)(SiteHeaderMobile);
