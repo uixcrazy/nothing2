@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
 import SiteHeader from '../components/layout/SiteHeader';
 import SiteFooter from '../components/layout/SiteFooter';
+import SiteFooterMobile from '../components/layout/mobile/SiteFooter';
 import injectSheet, { ThemeProvider } from 'react-jss';
 import { isMobile } from '../core/mobile-detect';
 import { VARS, BREAKPOINTS, LAYOUT_MAXWIDTH } from '../assets/styles/variables.style';
@@ -27,14 +28,15 @@ const styles = {
 
 class App extends Component {
   render() {
-    console.log(isMobile);
     const { classes } = this.props;
     return (
       <ThemeProvider theme={theme}>
         <div className={classes.app}>
-          <SiteHeader />
+          <SiteHeader isMobile/>
           {this.props.children}
-          <SiteFooter />
+          {
+            isMobile ? <SiteFooterMobile /> : <SiteFooter />
+          }
         </div>
       </ThemeProvider>
     );

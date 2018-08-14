@@ -1,10 +1,11 @@
 // Variables
 export const VARS = {
   colorPrimary: '#121212',
-  backgroundColor: '#fefefe',
+  backgroundColor: '#000',
+  // backgroundColor: '#fefefe',
   paddingLeftRight: '1rem',
-  primaryFont: '-apple-system,BlinkMacSystemFont,San Francisco,Helvetica Neue,Helvetica,Ubuntu,Roboto,Noto,Segoe UI,Arial,sans-serif',
-  secondaryFont: '"Montserrat", sans-serif',
+  primaryFont: '"Roboto", sans-serif',
+  secondaryFont: '"Roboto", sans-serif',
 };
 
 export const BREAKPOINTS = {

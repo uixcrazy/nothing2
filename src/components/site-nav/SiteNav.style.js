@@ -10,14 +10,15 @@ export default (theme) => ({
     flexShrink: 0, /* flex: 1 0 auto; */
 
     fontFamily: theme.secondaryFont,
-    color: theme.colorPrimary,
-    textTransform: 'uppercase',
+    // color: theme.colorPrimary,
+    color: '#999',
+    // textTransform: 'uppercase',
     fontSize: '0.75rem',
-    fontWeight: 600,
+    fontWeight: 300,
     textDecoration: 'none',
     letterSpacing: '1px',
     '&:hover': {
-      opacity: 0.6,
+      color: '#222',
     },
     '&.current': {
       color: '#777',

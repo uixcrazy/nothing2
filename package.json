@@ -128,5 +128,8 @@
       "node",
       "mjs"
     ]
+  },
+  "devDependencies": {
+    "flow-bin": "^0.78.0"
   }
 }

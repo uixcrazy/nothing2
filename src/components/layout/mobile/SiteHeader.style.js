@@ -2,14 +2,13 @@
 
 export default (theme) => {
   return ({
+  // const standardStyle = {
     siteHeader: {
+      // extend: theme.layoutMaxWidth,
       width: '100%',
-      height: '62px',
       display: 'flex',
       color: '#757575',
-      // temp
-      background: '#fff',
-      // background: theme.backgroundColor,
+      background: theme.backgroundColor,
       alignItems: 'center',
       // boxShadow: '0 1px 0 rgba(93, 96, 99, .1)',
       zIndex: 1,
