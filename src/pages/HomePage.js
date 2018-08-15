@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import Button, { ButtonGroup } from '@atlaskit/button';
 import MainSection from '../components/MainSection';
 import SiteMain from '../components/layout/SiteMain';
+import ListProduct from '../components/ap/ListProduct';
 import PageTitle from '../components/layout/PageTitle';
 import SwipeableTemporaryDrawer from '../components/ap/SwipeableTemporaryDrawer';
 import FixedBottom from '../components/ap/FixedBottom';
@@ -28,7 +29,7 @@ export default class HomePage extends Component {
               onClick={this.context.showModal}
               onClose={() => { }}
             >Click to view Atlaskit modal</button>
-            <div>
+            <ListProduct />
             <p>Lorem ipsum dolor amet pickled kinfolk pour-over ugh etsy taiyaki, palo santo shaman jean shorts tattooed hell of master cleanse migas. Thundercats gochujang single-origin coffee pok pok jean shorts aesthetic cardigan sriracha authentic air plant. Bicycle rights wolf green juice tousled before they sold out meditation scenester, forage sartorial humblebrag chia polaroid twee fam. Lo-fi farm-to-table chillwave celiac brunch butcher narwhal snackwave flexitarian cliche. Sriracha raclette master cleanse polaroid ugh tumeric flannel unicorn church-key cronut. Slow-carb typewriter four dollar toast pitchfork before they sold out cliche palo santo. Hexagon meh ethical skateboard freegan ennui kogi snackwave ramps quinoa tbh enamel pin raclette echo park truffaut.</p>
             <p>
   90's hot chicken 3 wolf moon twee hell of asymmetrical keytar cold-pressed palo santo fingerstache plaid. Flexitarian hammock lo-fi wolf narwhal gochujang godard subway tile paleo offal humblebrag organic thundercats meh. Forage shabby chic cold-pressed intelligentsia, kogi drinking vinegar cronut green juice copper mug viral edison bulb pop-up echo park DIY. Narwhal normcore twee kale chips occupy. Mixtape coloring book raclette, tofu etsy taxidermy scenester cold-pressed ethical blue bottle disrupt. Actually hashtag 90's, mlkshk lumbersexual kitsch pabst wayfarers activated charcoal yr edison bulb cornhole adaptogen pickled neutra. Tbh kale chips typewriter chia pok pok succulents four dollar toast biodiesel iPhone gentrify.</p>

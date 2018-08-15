@@ -2,21 +2,19 @@
 
 export default (theme) => {
   return ({
-  // const standardStyle = {
     siteHeader: {
-      // extend: theme.layoutMaxWidth,
       width: '100%',
+      height: '3.5rem',
       display: 'flex',
       color: '#757575',
       background: '#fff',
-      // background: theme.backgroundColor,
       alignItems: 'center',
-      // boxShadow: '0 1px 0 rgba(93, 96, 99, .1)',
-      zIndex: 1,
-      padding: {
-        right: theme.paddingLeftRight,
-        left: theme.paddingLeftRight,
-      },
+      zIndex: 10,
+      borderBottom: '1px solid rgba(48,51,58,.1)',
+      padding: 0,
+    },
+    sideMenu: {
+      width: 250,
     },
     logo: {
       '& > a': {
@@ -37,9 +35,3 @@ export default (theme) => {
     }
   });
 }
-
-// export default (theme) => {
-//   const backgroundColor = theme.backgroundColor;
-//   const customStyle = backgroundColor.callFnc();
-//   return Object.assign({}, standardStyle, customStyle);
-// };
