@@ -2,6 +2,10 @@
 
 ## Installation
 
+### UI
+
+  1. icon: https://material.io/tools/icons/?style=baseline
+
 #### Before you start
 
 * [node](https://nodejs.org/) version should be 6 or above (to check `node -v`) or use [nvm](https://github.com/creationix/nvm)

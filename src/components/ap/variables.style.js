@@ -1,4 +1,4 @@
-// Variables
+// Variables -- only for mobile
 export const VARS = {
   colorPrimary: 'cyan',
   backgroundColor: '#fefefe',

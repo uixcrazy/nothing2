@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
-import SiteHeader from '../components/layout/SiteHeader';
-import SiteFooter from '../components/layout/SiteFooter';
-import AppMobile from '../components/ap/App';
+import SiteHeaderMobile from './SiteHeader';
 import injectSheet, { ThemeProvider } from 'react-jss';
-import { isMobile } from '../core/mobile-detect';
-import { VARS, BREAKPOINTS, LAYOUT_MAXWIDTH } from '../assets/styles/variables.style';
-import '../assets/styles/normalize.css';
-import '../assets/styles/nothing_reset.css';
+import { VARS, BREAKPOINTS, LAYOUT_MAXWIDTH } from './variables.style';
+import '../../assets/styles/normalize.css';
+import '../../assets/styles/nothing_reset.css';
+import withRoot from './withRoot';
 
 // theme for mobile
 const theme = Object.assign({},
@@ -32,29 +30,24 @@ class App extends Component {
     isOpenSideBar: false,
   //   isModalOpen: false,
   };
-  // them mot action show sidebar
-  renderDesktop() {
+  render() {
     const { classes } = this.props;
     return (
       <ThemeProvider theme={theme}>
         <div className={classes.app}>
-          <SiteHeader />
+          <SiteHeaderMobile />
           {this.props.children}
-          <SiteFooter />
         </div>
       </ThemeProvider>
     );
   }
-  render() {
-    return isMobile ? <AppMobile {...this.props} /> : this.renderDesktop();
-  }
 }
 
 App.propTypes = {
-  classes: PropTypes.object,
+  classes: PropTypes.object.isRequired,
   navOpenState: PropTypes.object,
   onNavResize: PropTypes.func,
   children: PropTypes.node,
 };
 
-export default injectSheet(styles)(App);
+export default withRoot(injectSheet(styles)(App));

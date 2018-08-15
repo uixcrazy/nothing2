@@ -10,9 +10,9 @@ const styles = (theme) => ({
     color: '#555',
     padding: {
       top: 5,
-      right: theme.paddingLeftRight,
+      // right: theme.paddingLeftRight,
       bottom: 5,
-      left: theme.paddingLeftRight,
+      // left: theme.paddingLeftRight,
     },
   }
 });

@@ -8,7 +8,8 @@ export default (theme) => {
       width: '100%',
       display: 'flex',
       color: '#757575',
-      background: theme.backgroundColor,
+      background: '#fff',
+      // background: theme.backgroundColor,
       alignItems: 'center',
       // boxShadow: '0 1px 0 rgba(93, 96, 99, .1)',
       zIndex: 1,
@@ -17,10 +18,10 @@ export default (theme) => {
         left: theme.paddingLeftRight,
       },
     },
-    branding: {
+    logo: {
       '& > a': {
         height: '1.75rem',
-        width: '4.94187rem',
+        width: '2rem',
         display: 'block',
         backgroundImage: 'url(https://shentonista.sg/app/themes/shentonista-theme/assets/images/shentonista-logo.svg)',
         backgroundSize: '100%',

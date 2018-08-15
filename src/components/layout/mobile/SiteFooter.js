@@ -18,17 +18,10 @@ const styles = (theme) => ({
   }
 })
 
-// background: #fff;
-//     width: 100%;
-//     height: 60px;
-//     position: fixed;
-//     bottom: 0;
-//     z-index: 1000;
-//     border: 1px solid rgba(48,51,57,.15);
-//     box-shadow: 0 2px 5px rgba(0,0,0,.1);
-//     overflow: hidden;
-//     transition: opacity .5s ease-in-out , transform .5s ease-in-out;
-//     font-size: 16px;
+
+// this.handleChange = this.handleChange.bind(this);
+// this.handleSubmit = this.handleSubmit.bind(this);
+
 
 const SiteFooterMobile = ({ classes }) => (
   <footer className={classes.siteFooter}>
