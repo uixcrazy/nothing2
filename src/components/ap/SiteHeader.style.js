@@ -11,7 +11,12 @@ export default (theme) => {
       alignItems: 'center',
       zIndex: 10,
       borderBottom: '1px solid rgba(48,51,58,.1)',
-      padding: 0,
+      padding: {
+        top: 2,
+        right: 0,
+        bottom: 0,
+        left: 0,
+      },
     },
     sideMenu: {
       width: 250,
@@ -30,8 +35,7 @@ export default (theme) => {
         backgroundColor: '#222',
       }
     },
-    contentMenu: {
-      flex: '1 0 0',
+    btnMenu: {
     }
   });
 }

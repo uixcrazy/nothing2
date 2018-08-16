@@ -1,9 +1,15 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { isMobile } from '../core/mobile-detect';
 import App from './App';
 import asyncComponent from '../components/DynamicImport';
-const HomePage = asyncComponent(() => import('../pages/HomePage'));
+const HomePage = asyncComponent(() => {
+  if (isMobile) {
+    return import('../pages/HomePage.mobile');
+  }
+  return import('../pages/HomePage');
+});
 const AboutUsPage = asyncComponent(() => import('../pages/AboutUsPage'));
 const EyeStoryPage = asyncComponent(() => import('../pages/EyeStoryPage'));
 const OriginalApp = asyncComponent(() => import('../components/original/App'));

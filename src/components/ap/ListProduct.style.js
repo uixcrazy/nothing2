@@ -3,6 +3,11 @@ export default (theme) => {
   return ({
     item: {
       display: 'flex',
+      padding: {
+        top: '.5rem',
+        bottom: '.5rem',
+      },
+      borderBottom: '1px solid #eee',
     },
     ctLeft: {
       width: '5.5rem',

@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 import styles from './SearchBox.style';
-
 import SearchIcon from '@material-ui/icons/Search';
-import Icon from '@material-ui/core/Icon';
 
 class SearchBox extends Component {
   render() {

@@ -2,7 +2,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import SearchBox from '../ap/SearchBox'
 import SiteNav from '../site-nav/SiteNav';
 import injectSheet from 'react-jss';
 import styles from './SiteHeader.style';
@@ -14,7 +13,6 @@ const SiteHeader = ({ classes }) => {
         <NavLink to="/" activeClassName="current">SHENTONISTA</NavLink>
       </div>
       <div className={classes.contentMenu}>
-        <SearchBox />
         <SiteNav />
       </div>
     </header>

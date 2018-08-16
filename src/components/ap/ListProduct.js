@@ -1,17 +1,20 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 import styles from './ListProduct.style';
 import emptyFunc from '../../core/empty-func';
 
-const ListProduct = ({ classes, isLoaded, listProduct, handleClick }) => {
-  if (!isLoaded) return <div>Loading...</div>
-  // xu ly truong hop noData
-  // listProduct
+const ListProduct = ({ classes, isLoading, items, handleClick }) => {
+  if (isLoading) return <div>Loading...</div>
+  if (!items || (items && items.length <= 0)) {
+    return <div style={{
+      padding: 30,
+    }}>Nodata</div>
+  }
+  console.log(items);
   return (
     <section className={classes.listProduct}>
-      {listProduct && listProduct.map(item => (
+      {items && items.map(item => (
         <article key={item.id} className={classes.item}
           onClick={() => {
             handleClick(item)
@@ -35,8 +38,8 @@ ListProduct.defaultProps = {
 
 ListProduct.propTypes = {
   classes: PropTypes.object,
-  isLoaded: PropTypes.bool,
-  listProduct: PropTypes.array,
+  isLoading: PropTypes.bool,
+  items: PropTypes.array,
   handleClick: PropTypes.func,
 };
 

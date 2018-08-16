@@ -34,7 +34,7 @@ class SiteHeader extends Component {
             <NavLink to="/" activeClassName="current">SHENTONISTA</NavLink>
           </div>
           <SearchBox/>
-          <IconButton color="inherit" onClick={this.toggleDrawer(true)}>
+          <IconButton className={classes.btnMenu} onClick={this.toggleDrawer(true)}>
             <MenuIcon />
           </IconButton>
         </header>
