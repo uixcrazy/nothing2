@@ -20,11 +20,17 @@ const ListProduct = ({ classes, isLoading, items, handleClick }) => {
             handleClick(item)
           }}
         >
-          <div className={classes.ctLeft}>
-            <img className={classes.itemImage} src={item.urls.small} alt={item.id} />
-          </div>
-          <div className={classes.ctRight}>
-            af
+          <div className={classes.itemCt}>
+            <div className={classes.ctLeft}>
+              <img className={classes.itemImage} src={item.urls.small} alt={item.id} />
+            </div>
+            <div className={classes.ctRight}>
+              <p className={classes.itemTitle}>{item.description || 'no title here'}</p>
+              <p className={classes.itemSubTitle}>{item.user.instagram_username}</p>
+              <div>
+                <span className={classes.itemPrice}>{item.likes} đ</span>
+              </div>
+            </div>
           </div>
         </article>
       ))}

@@ -1,8 +1,9 @@
 // Variables -- only for mobile
 export const VARS = {
-  colorPrimary: 'cyan',
+  colorPrimary: '#29a7df',
   backgroundColor: '#fefefe',
   paddingLeftRight: '.5rem',
+  paddinglr2: '1rem',
   primaryFont: '"Roboto", sans-serif',
   secondaryFont: '"Roboto", sans-serif',
 };

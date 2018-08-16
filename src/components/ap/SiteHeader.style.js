@@ -9,6 +9,7 @@ export default (theme) => {
       color: '#757575',
       background: '#fff',
       alignItems: 'center',
+      position: 'fixed',
       zIndex: 10,
       borderBottom: '1px solid rgba(48,51,58,.1)',
       padding: {

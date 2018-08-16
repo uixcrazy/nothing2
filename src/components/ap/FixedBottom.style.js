@@ -39,6 +39,8 @@ export default (theme) => {
       border: 0,
       background: theme.colorPrimary,
       color: '#fff',
+      borderTopRightRadius: 0,
+      borderBottomRightRadius: 0,
     }
   });
 }
