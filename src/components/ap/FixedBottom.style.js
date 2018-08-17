@@ -1,5 +1,3 @@
-// import breakPoint from './breakpoint.style';
-
 export default (theme) => {
   return ({
     fixedBottom: {

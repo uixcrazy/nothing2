@@ -5,7 +5,15 @@ import injectSheet from 'react-jss';
 import styles from './FixedBottom.style';
 import emptyFunc from '../../core/empty-func';
 
-const FixedBottom = ({ classes, handleHotline, handleSubmit }) => {
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+
+const handleOpenFormTemp = (side, open) => () => {
+  this.setState({
+    [side]: open,
+  });
+};
+
+const FixedBottom = ({ classes, handleHotline, handleOpenForm }) => {
   return (
     <div className={classes.fixedBottom}>
       <button className={classes.btnPrimary}
@@ -16,7 +24,7 @@ const FixedBottom = ({ classes, handleHotline, handleSubmit }) => {
       </button>
       <button className={classes.btn}
         onClick={() => {
-          handleSubmit()
+          handleOpenForm();
         }}>
         download
       </button>
@@ -26,13 +34,13 @@ const FixedBottom = ({ classes, handleHotline, handleSubmit }) => {
 
 FixedBottom.defaultProps = {
   handleHotline: emptyFunc,
-  handleSubmit: emptyFunc,
+  handleOpenForm: handleOpenFormTemp,
 };
 
 FixedBottom.propTypes = {
   classes: PropTypes.object,
   handleHotline: PropTypes.func,
-  handleSubmit: PropTypes.func,
+  handleOpenForm: PropTypes.func,
 };
 
 export default injectSheet(styles)(FixedBottom);

@@ -25,7 +25,8 @@ export default (theme) => {
       whiteSpace: 'nowrap',
       textOverflow: 'ellipsis',
       overflow: 'hidden',
-      textAlign: 'center'
+      textAlign: 'center',
+      borderRadius: '2px',
     }
   })
 }
