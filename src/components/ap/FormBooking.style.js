@@ -30,7 +30,7 @@ export default (theme) => {
       left: 12,
       fontSize: '.875em',
       '&$apFocused': {
-        top: 0,
+        top: 3,
         left: 0,
       },
     },

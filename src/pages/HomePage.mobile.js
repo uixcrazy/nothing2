@@ -8,6 +8,7 @@ import SuggestLocation from '../components/ap/SuggestLocation';
 import PageTitle from '../components/layout/PageTitle';
 import SwipeableTemporaryDrawer from '../components/SwipeableTemporaryDrawer';
 import FixedBottom from '../components/ap/FixedBottom';
+import DetailPage from '../components/ap/DetailPage';
 
 import getData from '../core/fetch-api';
 import {
@@ -71,6 +72,7 @@ export default class HomePage extends Component {
       <SiteMain>
         <div style={{marginBottom: '52px'}}>
           <PageTitle>Home</PageTitle>
+          <DetailPage />
           <SwipeableTemporaryDrawer />
           <MainSection />
           <div>
