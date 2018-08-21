@@ -11,7 +11,6 @@ const ListProduct = ({ classes, isLoading, items, handleClick }) => {
       padding: 30,
     }}>Nodata</div>
   }
-  console.log(items);
   return (
     <section className={classes.listProduct}>
       {items && items.map(item => (

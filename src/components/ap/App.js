@@ -1,20 +1,12 @@
 import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
 import SiteHeaderMobile from './SiteHeader';
-import injectSheet, { ThemeProvider } from 'react-jss';
-import { VARS, BREAKPOINTS, LAYOUT_MAXWIDTH } from './variables.style';
+import injectSheet from 'react-jss';
 import '../../assets/styles/normalize.css';
 import '../../assets/styles/nothing_reset.css';
 import withRoot from './withRoot';
 
 // theme for mobile
-const theme = Object.assign({},
-  VARS,
-  {
-    breakpoints: BREAKPOINTS,
-    layoutMaxWidth: LAYOUT_MAXWIDTH
-  },
-  /*, and other function */)
 
 const styles = {
   app: {
@@ -33,12 +25,10 @@ class App extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <ThemeProvider theme={theme}>
-        <div className={classes.app}>
-          <SiteHeaderMobile />
-          {this.props.children}
-        </div>
-      </ThemeProvider>
+      <div className={classes.app}>
+        <SiteHeaderMobile />
+        {this.props.children}
+      </div>
     );
   }
 }

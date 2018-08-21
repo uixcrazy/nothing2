@@ -11,7 +11,7 @@ export default (theme) => {
       overflow: 'hidden',
       transition: 'opacity .5s ease-in-out , transform .5s ease-in-out',
       fontSize: '1rem',
-      padding: theme.paddingLeftRight,
+      padding: theme.spacing.unit,
       display: 'flex',
       flexWrap: 'nowrap',
     },
@@ -35,7 +35,7 @@ export default (theme) => {
     btnPrimary: {
       composes: '$btn',
       border: 0,
-      background: theme.colorPrimary,
+      background: theme.palette.primary.main,
       color: '#fff',
       borderTopRightRadius: 0,
       borderBottomRightRadius: 0,

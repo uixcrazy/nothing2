@@ -12,10 +12,10 @@ import '../assets/styles/nothing_reset.css';
 // theme for mobile
 const theme = Object.assign({},
   VARS,
-  {
-    breakpoints: BREAKPOINTS,
-    layoutMaxWidth: LAYOUT_MAXWIDTH
-  },
+  // {
+  //   breakpoints: BREAKPOINTS,
+  //   layoutMaxWidth: LAYOUT_MAXWIDTH
+  // },
   /*, and other function */)
 
 const styles = {

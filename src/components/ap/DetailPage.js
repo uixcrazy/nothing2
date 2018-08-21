@@ -46,8 +46,8 @@ class DetailPage extends Component {
           <Tabs
             value={value}
             onChange={this.handleChange}
-            // scrollable
-            // scrollButtons="on"
+            scrollable
+            scrollButtons="on" // auto
             indicatorColor="primary"
             textColor="primary"
           >
@@ -73,7 +73,7 @@ class DetailPage extends Component {
 }
 
 DetailPage.propTypes = {
-  classes: PropTypes.object,
+  classes: PropTypes.object.isRequired,
 };
 
 export default injectSheet(styles)(DetailPage);

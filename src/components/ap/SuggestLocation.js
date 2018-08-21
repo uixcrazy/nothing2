@@ -11,7 +11,6 @@ const SuggestLocation = ({ classes, isLoading, title, items, handleClick }) => {
       padding: 30,
     }}>Nodata</div>
   }
-  console.log(items);
   return (
     <section>
       <h3 className={classes.title}>{title}</h3>

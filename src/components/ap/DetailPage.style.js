@@ -1,4 +1,5 @@
 export default (theme) => {
+  console.log(theme.palette);
   return ({
     root: {
       flexGrow: 1,
